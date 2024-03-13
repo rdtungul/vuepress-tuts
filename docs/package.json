@@ -1,7 +1,7 @@
 {
   "name": "vuepress-tuts",
   "version": "0.0.1",
-  "description": "Learning VuePress",
+  "description": "WebApp built using Vue JS and WordPress.",
   "main": "index.js",
   "authors": {
     "name": "rosephdarl",

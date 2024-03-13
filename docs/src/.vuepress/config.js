@@ -8,7 +8,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  // description: description,
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -24,45 +24,42 @@ module.exports = {
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
   ],
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
+  // Navbar, Logo, and Links
   themeConfig: {
-    repo: "",
-    editLinks: false,
-    docsDir: "",
-    editLinkText: "",
-    lastUpdated: false,
+    logo: "./images/logo.png",
     nav: [
       {
-        text: "Guide",
-        link: "/guide/",
+        text: "Topics",
+        link: "/topics/",
       },
       {
-        text: "Config",
-        link: "/config/",
+        text: "Posts",
+        items: [
+          { text: "All Posts", link: "/Posts/Facebook/" },
+          {
+            text: "All Posts",
+            items: [
+              { text: "Facebook", link: "/topics/Facebook/" },
+              { text: "Instagram", link: "/topics/Instagram/" },
+              { text: "Twitter", link: "/topics/Twitter/" },
+            ],
+          },
+        ],
       },
       {
-        text: "VuePress",
-        link: "https://v1.vuepress.vuejs.org",
+        text: "Resources",
+        link: "/resources/",
+      },
+      {
+        text: "Donate",
+        link: "/donate/",
+      },
+      {
+        text: "GitHub",
+        link: "https://github.com/rdtungul",
+        target: "_blank",
+        rel: false,
       },
     ],
-    sidebar: {
-      "/guide/": [
-        {
-          title: "Guide",
-          collapsable: false,
-          children: ["", "using-vue"],
-        },
-      ],
-    },
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
 };

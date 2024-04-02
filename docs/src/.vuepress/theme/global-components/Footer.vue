@@ -48,10 +48,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.footer {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 2.5rem 2.5rem 2rem;
-}
+.footer
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2.5rem 2rem;
+  .made-by
+    fill: #000
+  .made-by:hover
+    fill: red !important
 </style>
